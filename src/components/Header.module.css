@@ -1,21 +1,10 @@
-.body{
-  background: var(--gray-700);
-  font-family: 'Inter', sans-serif;
-  height: 200px;
+.container {
   display: flex;
-  justify-content: center;
+  flex: 1;
   align-items: center;
-}
+  justify-content: center;
 
-.logo{
-  margin-top: 4.5rem;
-  margin-bottom: 5rem;
-}
-
-.foguete{
-  margin-top: 0.625rem;
-}
-
-.todo{
-  margin: 0.625rem 0.75rem 0.126rem;
+  padding: 5rem 0.625rem;
+  
+  background-color: var(--gray-700);
 }

@@ -5,12 +5,10 @@ import './global.css'
 
 function App() {
   return (
-    <>
-      <div>
-        <Header></Header>
-        <Body></Body>
-      </div>
-    </>
+    <main>
+      <Header></Header>
+      <Body></Body>
+    </main>
   )
 }
 
