@@ -5,26 +5,51 @@ import styles from './App.module.css'
 import { AddTask } from './components/AddTask'
 import { ListTask } from './components/List'
 
-const propList = {
-  id: 1,
-  tarefa: "Minha tarefa",
-  concluida: false
-}
+const propList = [
+  {
+    id: 1,
+    tarefa: "Minha tarefa",
+    concluida: false
+  },
+  {
+    id: 2,
+    tarefa: "Segunda tarefa",
+    concluida: false
+  },
+  {
+    id: 3,
+    tarefa: "Terceira tarefa",
+    concluida: true
+  }
+]
 
 function App() {
   return (
     <div className={styles.container}>
       <Header></Header>
-      <main className={styles.wrapper}>
+      <div className={styles.wrapper}>
         <AddTask></AddTask>
-      </main>
-      {/* <Body></Body> */}
-      <ListTask 
-        id={propList.id}
-        tarefa={propList.tarefa}
-        concluida={propList.concluida}
-      >
-      </ListTask>
+      </div>
+
+      <div className={styles.header}>
+        <label className={styles.criadas}>Tarefas criadas</label>  
+        <label className={styles.concluidas}>Concluídas</label>  
+      </div>
+
+      {
+        //<Body></Body>
+
+        propList.map(p => {
+          return(
+              <ListTask 
+                id={p.id}
+                tarefa={p.tarefa}
+                concluida={p.concluida}
+              />
+            )
+          }
+        )
+      }
     </div>
   )
 }
