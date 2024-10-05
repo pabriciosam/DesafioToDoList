@@ -14,13 +14,17 @@
   justify-content: space-between;
 }
 
+/* .task input[type=radio]{
+  
+} */
+
 .container label{
   color: var(--gray-100);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
 
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .container .trash{

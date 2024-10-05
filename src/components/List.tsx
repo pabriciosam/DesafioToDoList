@@ -8,10 +8,14 @@ interface List {
 }
 
 export function ListTask({id, tarefa, concluida}:List){
+  function handleCheckTask(){
+
+  }
+
   return(
     <div key={id} className={styles.container}>
-      <div className={styles.input}>
-        <input type="radio" checked={concluida}></input>
+      <div className={styles.task}>
+        <input type="radio" checked={concluida} onChange={handleCheckTask}></input>
         <label>{tarefa}</label>
       </div>
       <div className={styles.trash}>
